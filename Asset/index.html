@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Band — One‑Page Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="nav" id="top">
+    <div class="container nav__row">
+      <a class="nav__brand" href="#home" aria-label="Trang chủ">BOXCAL</a>
+      <button class="nav__toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <nav id="navMenu" class="nav__menu">
+        <a href="#home" class="nav__link">HOME</a>
+        <a href="#band" class="nav__link">CLUBS</a>
+        <a href="#event" class="nav__link">EVENTS</a>
+        <a href="#contact" class="nav__link">CONTACT</a>
+        <div class="nav__dropdown">
+          <button class="nav__link nav__link--dropdown" aria-haspopup="true" aria-expanded="false">MORE ▾</button>
+          <div class="nav__dropdown-menu" role="menu">
+            <a href="#media" class="nav__dropdown-item" role="menuitem">MEDIA</a>
+            <a href="#gallery" class="nav__dropdown-item" role="menuitem">GALLERY</a>
+          </div>
+        </div>
+        <form class="nav__search" role="search" aria-label="Tìm kiếm">
+          <input type="search" placeholder="Search" aria-label="Search" />
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-label="Trang chủ">
+    <div class="hero__slider" data-autoplay="6000">
+      <figure class="hero__slide hero__slide--active" style="--bg:url('Boxing-SSC.jpg')">
+        <figcaption>
+          <h1>SSC</h1>
+          <p>Best fighters-Best coaches</p>
+        </figcaption>
+      </figure>
+      <figure class="hero__slide" style="--bg:url('SSC 2.jpg')">
+        <figcaption>
+          <h1>Trigger Boxing</h1>
+          <p>True fighters</p>
+        </figcaption>
+      </figure>
+      <figure class="hero__slide" style="--bg:url('VULE.jpg')">
+        <figcaption>
+          <h1>Vu Le Boxing</h1>
+          <p>Young talents</p>
+        </figcaption>
+      </figure>
+      <div class="hero__controls">
+        <button class="hero__btn" data-prev aria-label="Ảnh trước">‹</button>
+        <button class="hero__btn" data-next aria-label="Ảnh sau">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Band -->
+  <section class="section" id="band" aria-label="Ban nhạc">
+    <div class="container narrow">
+      <h2 class="section__title">CLUBS</h2>
+      <p class="section__subtitle">We love fights</p>
+      <p class="section__lead">We created this website so boxing fans, like us, can find boxing matches all around Ho Chi Minh City!</p>
+      <div class="grid grid--3">
+        <div class="card card--person">
+          <img src="SSC logo.png" alt="Name" />
+          <h3>SSC</h3>
+          <p>The best of the best</p>
+        </div>
+        <div class="card card--person">
+          <img src="Trigger boxing logo.png" alt="Name" />
+          <h3>Trigger Boxing</h3>
+          <p>Top Pro Boxers</p>
+        </div>
+        <div class="card card--person">
+          <img src="Vũ lê logo.jpg" alt="Name" />
+          <h3>Vu Le Boxing</h3>
+          <p>Young talents!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section section--dark" id="event" aria-label="Lịch lưu diễn">
+    <div class="container narrow">
+      <h2 class="section__title section__title--invert">EVENT DATES</h2>
+      <p class="section__subtitle section__subtitle--invert">Remember to book your tickets!</p>
+
+      <ul class="tickets">
+        <li>September <span class="sold-out">Sold out</span></li>
+        <li>October <span class="sold-out">Sold out</span></li>
+        <li>November <span class="badge">3</span></li>
+        <li>December <span class="badge">3</span></li>
+      </ul>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <img src="Sunday Fiesta.jpg" alt="New York" />
+          <div class="card__body">
+            <h3>Sunday Fiesta</h3>
+            <p class="muted">Sun 9 Nov 2025</p>
+            <p>Lower-Amateur fights.</p>
+            <button class="btn" data-open="ticketModal" data-city="New York">Buy Tickets</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Trigger 6.jpg" alt="Paris" />
+          <div class="card__body">
+            <h3>Trigger 6</h3>
+            <p class="muted">Sat 17 Jan 2026</p>
+            <p>Semi-pro fights.</p>
+            <button class="btn" data-open="ticketModal" data-city="Paris">Buy Tickets</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="NB 2.jpg" alt="San Francisco" />
+          <div class="card__body">
+            <h3>National Boxing championship</h3>
+            <p class="muted"> Wen 12 Oct 2025</p>
+            <p>Best of a nation.</p>
+            <button class="btn" data-open="ticketModal" data-city="San Francisco">Buy Tickets</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact" aria-label="Liên hệ">
+    <div class="container narrow">
+      <h2 class="section__title">CONTACT</h2>
+      <p class="section__subtitle">Fan? Drop a note!</p>
+      <div class="grid grid--2">
+        <div>
+          <p>
+            <strong>HCMC, VN</strong><br>
+            Phone: +84 0992809922<br>
+            Email: aihoi@yahoomail.com
+          </p>
+          <p>Swing by for a cup of <span aria-label="coffee" role="img">☕</span>, or leave us a message:</p>
+        </div>
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <input required name="name" type="text" placeholder="Name" />
+            <input required name="email" type="email" placeholder="Email" />
+          </div>
+          <input required name="message" type="text" placeholder="Message" />
+          <button class="btn btn--block" type="submit">SEND</button>
+          <p class="form__hint" id="formHint" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media / Map placeholder -->
+  <section class="section" id="media" aria-label="Media">
+    <div class="container">
+      <div class="embed">
+        <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799095295!2d-74.25986568710993!3d40.69767007039433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDBuNDEnNTAuOCJOIDc0wrAwNyc1OS4zIlc!5e0!3m2!1sen!2sus!4v1700000000000"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery" aria-label="Thư viện ảnh">
+    <div class="container">
+      <div class="grid grid--4 gallery">
+        <img class="gallery__item" src="NB 2.jpg" alt="Concert 1" />
+        <img class="gallery__item" src="NB.webp" alt="Concert 2" />
+        <img class="gallery__item" src="SSC 2.jpg" alt="Concert 3" />
+        <img class="gallery__item" src="Boxing-SSC.jpg" alt="Concert 4" />
+        <img class="gallery__item" src="Me.jpg" alt="Concert 5" />
+         <img class="gallery__item" src="VULE.jpg" alt="Concert 6" />
+          <img class="gallery__item" src="Sunday Fiesta.jpg" alt="Concert 7" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="#top" class="to-top" aria-label="Lên đầu trang">↑</a>
+      <p>Powered by <a href="#">your‑brand</a></p>
+    </div>
+  </footer>
+
+  <!-- Ticket Modal -->
+  <dialog class="modal" id="ticketModal" aria-labelledby="ticketTitle">
+    <form method="dialog" class="modal__content">
+      <header class="modal__header">
+        <h3 id="ticketTitle">Tickets</h3>
+        <button value="cancel" class="modal__close" aria-label="Đóng">✕</button>
+      </header>
+      <div class="modal__body">
+        <label class="field">
+          <span>City</span>
+          <input type="text" name="city" id="ticketCity" readonly>
+        </label>
+        <label class="field">
+          <span>How many?</span>
+          <input type="number" min="1" max="10" value="1" name="qty">
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" required name="buyerEmail" placeholder="you@example.com">
+        </label>
+      </div>
+      <footer class="modal__footer">
+        <button class="btn" value="default">Pay</button>
+        <button class="btn btn--ghost" value="cancel">Cancel</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- Lightbox Modal -->
+  <dialog class="modal" id="lightbox" aria-labelledby="lightboxTitle">
+    <figure class="modal__content modal__content--lightbox">
+      <button class="modal__close" value="cancel" aria-label="Đóng">✕</button>
+      <img id="lightboxImg" alt="Preview" />
+      <figcaption id="lightboxTitle" class="muted"></figcaption>
+    </figure>
+  </dialog>
+
+  <script>
+    // Utilities
+    const $ = (s, r = document) => r.querySelector(s);
+    const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+    // Sticky nav & mobile toggle
+    const nav = document.querySelector('.nav');
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('#navMenu');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Dropdown
+    const ddBtn = document.querySelector('.nav__link--dropdown');
+    const ddMenu = document.querySelector('.nav__dropdown-menu');
+    ddBtn.addEventListener('click', () => {
+      const expanded = ddBtn.getAttribute('aria-expanded') === 'true';
+      ddBtn.setAttribute('aria-expanded', String(!expanded));
+      ddMenu.toggleAttribute('data-open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav__dropdown')) ddMenu.removeAttribute('data-open');
+    });
+
+    // Smooth scroll
+    $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        e.preventDefault();
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }));
+
+    // Hero slider
+    const slider = $('.hero__slider');
+    const slides = $$('.hero__slide', slider);
+    const nextBtn = $('[data-next]');
+    const prevBtn = $('[data-prev]');
+    let index = 0, timer;
+    const show = (i) => {
+      slides.forEach((s, k) => s.classList.toggle('hero__slide--active', k === i));
+    };
+    const next = () => { index = (index + 1) % slides.length; show(index); };
+    const prev = () => { index = (index - 1 + slides.length) % slides.length; show(index); };
+    const autoplay = () => {
+      clearInterval(timer);
+      const ms = parseInt(slider.getAttribute('data-autoplay') || '6000', 10);
+      timer = setInterval(next, ms);
+    };
+    nextBtn.addEventListener('click', () => { next(); autoplay(); });
+    prevBtn.addEventListener('click', () => { prev(); autoplay(); });
+    autoplay();
+
+    // Ticket modal
+    const ticketModal = $('#ticketModal');
+    $$('[data-open="ticketModal"]').forEach(btn => btn.addEventListener('click', () => {
+      $('#ticketCity').value = btn.getAttribute('data-city');
+      ticketModal.showModal();
+    }));
+
+    // Contact form (demo only)
+    const contactForm = $('#contactForm');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      $('#formHint').textContent = '✅ Thanks! Your message has been sent (demo).';
+      contactForm.reset();
+    });
+
+    // Gallery lightbox
+    const lightbox = $('#lightbox');
+    const lightboxImg = $('#lightboxImg');
+    $$('.gallery__item').forEach(img => img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      $('#lightboxTitle').textContent = img.alt || '';
+      lightbox.showModal();
+    }));
+
+    // Close modals on backdrop click
+    $$('dialog').forEach(dlg => {
+      dlg.addEventListener('click', (e) => {
+        const rect = dlg.getBoundingClientRect();
+        const clickedIn = rect.top <= e.clientY && e.clientY <= rect.bottom && rect.left <= e.clientX && e.clientX <= rect.right;
+        if (!clickedIn) dlg.close();
+      });
+    });
+  </script>
+</body>
+</html>
