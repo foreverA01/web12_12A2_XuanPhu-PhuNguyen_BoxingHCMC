@@ -64,8 +64,8 @@ a{color:var(--brand); text-decoration:none}
 .hero__slide h1{font-size:clamp(28px, 5.5vw, 64px); margin:.2rem 0}
 .hero__slide p{color:#e8e8e8; margin:0}
 .hero__slide--active{opacity:1; transform:scale(1)}
-.hero__controls{position:absolute; inset:auto 0 1rem 0; display:flex; justify-content:space-between; padding:0 1rem}
-.hero__btn{background:rgba(22,26,49,.6); color:var(--text); border:1px solid var(--border); padding:.4rem .8rem; border-radius:999px; cursor:pointer}
+.hero__controls{position:absolute; inset:auto 0 1rem 0; display:flex; justify-content:space-between; padding:0 1rem; top: 50%; bottom: auto; transform: translateY(-50%);}
+.hero__btn{background:rgba(22,26,49,.6); color:var(--text); border:1px solid var(--border); padding: 0.3rem 0.8rem; font-size: 1.3rem; border-radius:999px; cursor:pointer}
 
 /* Sections */
 .section{padding:72px 0}
@@ -96,7 +96,7 @@ a{color:var(--brand); text-decoration:none}
 .card--person{text-align:center}
 .card--person img{border-bottom:1px solid var(--border); aspect-ratio:1/1}
 .card--person h3{margin:.6rem 0 .2rem}
-.card--person p{margin:0; color:var(--muted)}
+.card--person p{margin:0.1em 0 0.5em; color:var(--muted)}
 
 /* Tickets list */
 .tickets{list-style:none; margin:0 0 1rem; padding:0; border:1px solid var(--border); border-radius:12px; overflow:hidden}
@@ -109,7 +109,7 @@ a{color:var(--brand); text-decoration:none}
 .btn{appearance:none; background:linear-gradient(180deg, #2fd1e4, #17a2b8); color:#091018; font-weight:700; border:none; border-radius:12px; padding:.7rem 1rem; cursor:pointer; box-shadow:var(--shadow)}
 .btn:hover{filter:brightness(1.05)}
 .btn:focus{outline:2px solid var(--ring)}
-.btn--block{width:100%}
+.btn--block{width:100%; margin:1em 0 0;}
 .btn.btn--ghost{background:transparent; border:1px solid var(--border); color:var(--text)}
 
 /* Forms */
@@ -136,7 +136,7 @@ a{color:var(--brand); text-decoration:none}
 /* Modal (native <dialog>) */
 .modal{border:none; border-radius:16px; padding:0; width:min(560px, 92vw); background:var(--card); color:var(--text); box-shadow:var(--shadow)}
 .modal::backdrop{background:rgba(5,9,20,.6)}
-.modal__content{margin:0}
+.modal__content{margin:0.2em 0 0.5em; text-align: center;}
 .modal__header{display:flex; align-items:center; justify-content:space-between; padding:1rem 1rem .5rem 1rem; border-bottom:1px solid var(--border)}
 .modal__body{display:grid; gap:.8rem; padding:1rem}
 .modal__footer{display:flex; gap:.6rem; padding:0 1rem 1rem 1rem}

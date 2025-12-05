@@ -62,7 +62,7 @@
     </div>
   </section>
 
-  <!-- Band -->
+  <!-- CLUB -->
   <section class="section" id="band" aria-label="Ban nhạc">
     <div class="container narrow">
       <h2 class="section__title">CLUBS</h2>
@@ -162,6 +162,8 @@
   <!-- Media / Map placeholder -->
   <section class="section" id="media" aria-label="Media">
     <div class="container">
+      <h2 class="section__title">MAP</h2>
+      <p class="section__subtitle">Find your clubs</p>
       <div class="embed">
         <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799095295!2d-74.25986568710993!3d40.69767007039433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDBuNDEnNTAuOCJOIDc0wrAwNyc1OS4zIlc!5e0!3m2!1sen!2sus!4v1700000000000"></iframe>
       </div>
@@ -297,6 +299,27 @@
       ticketModal.showModal();
     }));
 
+    const ticketForm = ticketModal.querySelector('form');
+
+    // Allow Cancel/✕ without validation
+    ticketModal.querySelectorAll('button[value="cancel"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();       // stop submit
+        e.stopPropagation();      // stop bubbling
+        ticketModal.close();      // just close
+      });
+    });
+
+    // Only enforce email when submitting with Pay
+    ticketForm.addEventListener('submit', (e) => {
+      const emailField = ticketForm.querySelector('input[name="buyerEmail"]');
+      if (e.submitter && e.submitter.value === 'cancel') return; // safety
+      if (!emailField.checkValidity()) {
+        e.preventDefault();
+        emailField.reportValidity();
+      }
+    });
+
     // Contact form (demo only)
     const contactForm = $('#contactForm');
     contactForm.addEventListener('submit', (e) => {
@@ -315,6 +338,15 @@
       lightbox.showModal();
     }));
 
+    // Allow Cancel/✕ without validation
+    lightbox.querySelectorAll('button[value="cancel"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();       // stop submit
+        e.stopPropagation();      // stop bubbling
+        lightbox.close();      // just close
+      });
+    });
+
     // Close modals on backdrop click
     $$('dialog').forEach(dlg => {
       dlg.addEventListener('click', (e) => {
@@ -323,6 +355,7 @@
         if (!clickedIn) dlg.close();
       });
     });
+    
   </script>
 </body>
 </html>
