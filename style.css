@@ -136,7 +136,7 @@ a{color:var(--brand); text-decoration:none}
 /* Modal (native <dialog>) */
 .modal{border:none; border-radius:16px; padding:0; width:min(560px, 92vw); background:var(--card); color:var(--text); box-shadow:var(--shadow)}
 .modal::backdrop{background:rgba(5,9,20,.6)}
-.modal__content{margin:0.2em 0 0.5em; text-align: right;}
+.modal__content{margin:0.2em 0 0.5em; text-align: left;}
 .modal__content--lightbox{margin:0.2em 0 0.5em; text-align: center;}
 .modal__header{display:flex; align-items:center; justify-content:space-between; padding:1rem 1rem .5rem 1rem; border-bottom:1px solid var(--border)}
 .modal__body{display:grid; gap:.8rem; padding:1rem}
